@@ -28,6 +28,5 @@ cd server
 npm install
 npm start
 
-<img width="1920" height="1008" alt="Screenshot 2026-05-01 142310" src="https://github.com/user-attachments/assets/7f565670-9b2c-4df4-80de-8e6ddb1d9204" />
-
+![Screenshot](https://github.com/user-attachments/assets/7f565670-9b2c-4df4-80de-8e6ddb1d9204)
 
