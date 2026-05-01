@@ -27,3 +27,7 @@ Due to API quota limitations, a rule-based intelligent system is implemented tha
 cd server
 npm install
 npm start
+
+
+<img width="1920" height="1008" alt="Screenshot 2026-05-01 142310" src="https://github.com/user-attachments/assets/9478aba3-a649-4205-b867-e0223daca557" />
+
