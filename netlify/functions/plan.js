@@ -1,11 +1,22 @@
 exports.handler = async (event) => {
-  const data = JSON.parse(event.body);
+  try {
+    const body = JSON.parse(event.body || "{}");
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: "Plan generated successfully",
-      data
-    })
-  };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: "Plan generated successfully",
+        input: body
+      })
+    };
+  } catch (err) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        success: false,
+        error: err.message
+      })
+    };
+  }
 };
