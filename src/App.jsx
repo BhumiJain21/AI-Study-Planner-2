@@ -11,23 +11,21 @@ function App() {
   const [motivation, setMotivation] = useState("");
 
   const generatePlan = async () => {
-    const res = await fetch("/.netlify/functions/plan", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        subjects: subjects.split(","),
-        hoursPerDay: Number(hours),
-        days: Number(days),
-      }),
-    });
+   const res = await fetch("/.netlify/functions/plan", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    subjects: subjects.split(","),
+    hoursPerDay: Number(hours),
+    days: Number(days),
+  }),
+});
 
-    const data = await res.json();
-    setPlan(data.plan);
-    setSuggestion(data.suggestion);
-    setMotivation(data.motivation);
-  };
+const data = await res.json();
+
+setPlan(data.plan || []);
+setSuggestion(data.suggestion || "");
+setMotivation(data.motivation || "");
 
   return (
     <div className="container">
