@@ -20,6 +20,7 @@ Due to API quota limitations, a rule-based intelligent system is implemented tha
 - Backend: Node.js + Express
 - Styling: CSS
 
+![Screenshot](assets/screenshot.png)
 ## 📦 How to Run
 
 ### Backend
@@ -28,5 +29,6 @@ cd server
 npm install
 npm start
 
-![Screenshot](https://github.com/user-attachments/assets/7f565670-9b2c-4df4-80de-8e6ddb1d9204)
+
+
 
