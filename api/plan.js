@@ -1,6 +1,19 @@
-export default function handler(req, res) {
-  res.status(200).json({
-    message: "Plan generated!",
-    plan: "Study 2 hours daily + revise + practice"
-  });
-}
+exports.handler = async (event) => {
+  try {
+    const data = JSON.parse(event.body);
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: "Plan working",
+        data
+      })
+    };
+  } catch (err) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: err.message })
+    };
+  }
+};
