@@ -11,7 +11,7 @@ function App() {
   const [motivation, setMotivation] = useState("");
 
   const generatePlan = async () => {
-    const res = await fetch("http://localhost:5000/api/plan", {
+    const res = await fetch("/.netlify/functions/plan", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
