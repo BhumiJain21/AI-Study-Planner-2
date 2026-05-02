@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "/.netlify/functions"
+  baseURL: "/.api/plan"
 });
 
 export default API;
